@@ -19,11 +19,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // SafeArea is a widget used to balance the screen
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('Phone call in Flutter'),
-            backgroundColor: Colors.purple,
+            title: const Text('Phone call in Flutter'), // AppBar/App title
+            backgroundColor: Colors.purple, // AppBar color which is purple
           ),
           body: SafeArea(
             child: Center(
@@ -41,12 +42,13 @@ class MyApp extends StatelessWidget {
                   const SizedBox(
                     height: 20.0,
                   ),
+                  // Elevated Button Used to make call
                   ElevatedButton(
                     onPressed: _makingPhoneCall,
-                    child: const Text('Call'),
+                    child: const Text('Call'), // Text in the button
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.purple,
-                        minimumSize: const Size(100, 40)),
+                        primary: Colors.purple, // Button's Color
+                        minimumSize: const Size(100, 40)), // Button's Size
                   ),
                 ],
               ),
